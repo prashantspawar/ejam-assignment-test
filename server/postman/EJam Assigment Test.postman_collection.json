@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "0c70f733-5046-43f1-89f6-d3fd0c86fdb3",
+		"name": "EJam Assigment Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Weather By City Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1.0/weather/get-weather/city/mumbai",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1.0",
+						"weather",
+						"get-weather",
+						"city",
+						"mumbai"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather By Cities Name",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"mumbai\", \"navi mumbai\"]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1.0/weather/get-weather/city",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1.0",
+						"weather",
+						"get-weather",
+						"city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather By Zip Codes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\"2295411\", \"29220252\"]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1.0/weather/get-weather/zipcode",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1.0",
+						"weather",
+						"get-weather",
+						"zipcode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather By ZipCode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1.0/weather/get-weather/zipcode/2295411",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1.0",
+						"weather",
+						"get-weather",
+						"zipcode",
+						"2295411"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
